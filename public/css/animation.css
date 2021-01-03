@@ -1,0 +1,46 @@
+.loading{
+    display: grid;
+    grid-template-columns: repeat(4,30px);
+}
+ .loading span{
+    display: block;
+    animation: load 2s ease-in-out infinite;
+    border-radius: 50%;
+} 
+.loading span:nth-child(1){
+    animation-delay: .50s;
+}
+.loading span:nth-child(2){
+    animation-delay: 1.0s;
+}
+.loading span:nth-child(3){
+    animation-delay: 1.5s;
+}
+.loading span:nth-child(4){
+    animation-delay: 2.0s;
+} 
+
+@keyframes load{
+    0%{
+        background: #4A7FF3;
+        height: 25px;
+        width: 25px;
+    }
+    25%{ 
+        height: 15px;
+        width: 15px;     
+    }
+    50%{ 
+        height: 25px;
+        width: 25px;     
+    }
+    75%{ 
+        height: 15px;
+        width: 15px;     
+    }
+    100%{   
+        height: 25px;
+        width: 25px;
+       
+    }
+} 
