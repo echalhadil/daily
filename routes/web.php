@@ -11,7 +11,6 @@ use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
 
-use App\Models\Notification;
 use Illuminate\Support\Facades\Broadcast;
 use Illuminate\Support\Facades\Route;
 
@@ -90,6 +89,6 @@ Route::post('profiles/{id}/unfriend',[FriendshipController::class,'unfriend']);
 
 //messenger
 Route::get('friends',[FriendshipController::class,'friends']);
-
+// create new conversation
 Route::get('messenger/{id}/new',[ConversationController::class,'new']);
 
