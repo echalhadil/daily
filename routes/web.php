@@ -88,6 +88,6 @@ Route::post('profiles/{id}/unfriend',[FriendshipController::class,'unfriend']);
 
 //messenger
 Route::get('friends',[FriendshipController::class,'friends']);
-
+// create new conversation
 Route::get('messenger/{id}/new',[ConversationController::class,'new']);
 
