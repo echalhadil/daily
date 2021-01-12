@@ -3,7 +3,7 @@
     
         <!-- the header -->
         <nav class=" uk-position-fixed uk-width-1-1 uk-box-shadow-large" style="background:white;">
-            <div class="uk-flex uk-width-1-1 uk-padding-small"> 
+            <div class="uk-flex uk-width-1-1 "> 
                 <logo />
                 <search-input />
                 <options :notifications="notifications" :conversations="conversations" />

@@ -5,7 +5,7 @@
         v-on:click="isVisible =! isVisible"
         :aria-expanded="isVisible"
         > 
-            <i v-if="isIcon" class="mdi mdi-24px" :class="[icon,color]" />
+            <i v-if="isIcon" class="far fa-lg " :class="[icon,color]" />
             <b v-else :class="color"  >{{ icon }}</b>
             <slot name="number"></slot>
         </button>
@@ -39,8 +39,8 @@ export default {
     computed: {
         buttonClasses(){
             return this.isVisible
-                ? 'uk-inline uk-button uk-button-text uk-margin-auto uk-padding-remove uk-text-bold uk-open'
-                : 'uk-inline uk-button uk-button-text uk-margin-auto uk-padding-remove uk-text-bold '
+                ? 'uk-inline uk-border-rounded uk-button uk-button-text uk-margin-auto uk-padding-remove uk-text-bold uk-open'
+                : 'uk-inline uk-border-rounded uk-button uk-button-text uk-margin-auto uk-padding-remove uk-text-bold '
         },
 
         bropdownClasses(){

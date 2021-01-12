@@ -1,6 +1,6 @@
 <template>
     <dropdown 
-    :icon="'mdi-message-outline'" 
+    :icon="'fa-envelope'" 
     :heigth="'21rem'"
     :width="'uk-width-1-4'"
     :isIcon="true"
@@ -56,7 +56,7 @@
                             <p class="uk-text-truncate uk-text-small uk-padding-remove uk-margin-remove " style="width:180px;">
                                 {{ conversation.last_message }}
                             </p>
-                            <i v-if=" ! conversation.readed" class="mdi uk-margin-auto-left uk-text-right uk-text-small mdi-circle" style="color: #4A7FF3;" aria-hidden="true"></i> 
+                            <i v-if=" ! conversation.readed" class="fas uk-margin-auto-left uk-text-right uk-text-small fa-circle" style="color: #4A7FF3;" aria-hidden="true"></i> 
 
                         </div>
                         
@@ -66,9 +66,9 @@
                 </div>    
             </inertia-link>
 
-            <div v-if="! conversations.length " class="uk-width-1-1 uk-margin-bottom">
+            <div  v-if="! conversations.length " class="uk-width-1-1 uk-text-center uk-margin-bottom">
                 <p class="uk-h3 uk-text-center uk-margin-top uk-text-bold" style="color:#9E9E9E;"> You Don't Have any Messages.</p>
-                <p class="mdi mdi-48px uk-text-center mdi-message-bulleted-off uk-h3 " style="color:#9E9E9E;"></p>
+                <p class="fas  fa-4x fa-comment-alt-slash  " style="color:#9E9E9E;"></p>
             </div>
           
             

@@ -4,18 +4,18 @@
         <div class="uk-width-2-3 uk-width-1-3@m uk-margin-top uk-margin-bottom black uk-flex uk-margin-auto">
 
             <div role="button"  @click="showing('timeline')" v-bind:class="{'uk-background-primary text-white':showtimeline}" class="uk-background-default uk-width-1-3 uk-margin-small-left uk-margin-small-right uk-margin-small-top uk-border-rounded uk-margin-small-bottom uk-padding-small uk-box-shadow-large"  >
-                <p  class=" uk-text-center text-center"> <i class="mdi mdi-36px mdi-timeline-outline"></i></p>
+                <p  class=" uk-text-center text-center"> <i class="fal fa-3x fa-stream"></i></p>
                 <p class="uk-text-center uk-margin-small text-center">Timeline</p>
             </div>
             
 
             <div role="button" @click="showing('pictures')" v-bind:class="{'uk-background-primary text-white':showpictures}" class="uk-background-default uk-width-1-3 uk-margin-small-left uk-margin-small-top uk-margin-small-bottom uk-border-rounded uk-margin-small-right uk-padding-small uk-box-shadow-large">
-                <p  class="uk-text-center text-center rounded-lg "><i class="mdi mdi-36px mdi-camera-outline"></i></p>
+                <p  class="uk-text-center text-center rounded-lg "><i class="fal fa-3x fa-camera"></i></p>
                 <p class="uk-text-center uk-margin-small text-center">Pictures</p>
             </div>
 
             <div role="button" @click="showing('friends')" class="uk-background-default uk-width-1-3 uk-margin-small-left uk-margin-small-top uk-margin-small-bottom uk-border-rounded uk-margin-small-right uk-padding-small uk-box-shadow-large" v-bind:class="{'uk-background-primary text-white':showfriends}"  >
-                <p  class="uk-text-center text-center"><i class="mdi mdi-36px mdi-account-outline"></i></p>
+                <p  class="uk-text-center text-center"><i class="fal fa-3x fa-users"></i></p>
                 <p class="uk-text-center uk-margin-small text-center">Friends</p>
             </div>
             
@@ -36,7 +36,7 @@
                 <div class=" uk-width-1-1 uk-padding-remove uk-margin-large-top uk-border-rounded uk-text-center"  >
                     
                     <p class="uk-h1 uk-text-capitalize" >no posts </p>
-                    <i class="mdi mdi-48px mdi-camera" ></i>
+                    <i class="fa fa-6x fa-camera" ></i>
                 </div>
 
             </div>
@@ -61,7 +61,7 @@
                 <div class=" uk-width-1-1 uk-padding-remove uk-margin-large-top uk-border-rounded uk-text-center"  >
                     
                     <p class=" uk-h1 uk-text-capitalize " >no friends </p>
-                    <i class=" mdi mdi-48px mdi-account " ></i>
+                    <i class=" fa fa-6x fa-users " ></i>
                 </div>
 
             </div>

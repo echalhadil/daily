@@ -3,7 +3,7 @@
         <img class=" uk-width-1-1 object-fit-cover profile-picture uk-border-rounded " v-bind:src="'../'+user.picture" :alt="user.firstname +' '+user.lastname" >
         
         <div v-if="userOwnsProfile" class=" uk-float-right uk-position-relative uk-text-center uk-border-circle edit-profile-picture "  >  
-            <span uk-toggle="target: #changepicture"  class="uk-position-relative uk-border-circle black uk-position-top-right mdi mdi-camera" > </span>
+            <span uk-toggle="target: #changepicture"  class="uk-position-relative uk-border-circle black uk-position-top-right far fa-camera" > </span>
             <!-- This is the modal -->
             <div id="changepicture" class="uk-margin-auto-vertical"  uk-modal>
                 <div class="uk-modal-dialog" >
@@ -14,7 +14,7 @@
                             <!-- Edit photo -->
                             <div uk-form-custom class="uk-button uk-text-capitalize uk-margin-auto uk-width-1-3 "> 
                                 <input type="file" id="newProfilePicture" v-on:change="previewPicture">
-                                <p class=" uk-margin-remove " type="button"><i class="mdi mdi-image-plus mdi-24px" ></i> Select photo</p>
+                                <p class=" uk-margin-remove " type="button"><i class="fa fa-image fa-lg" ></i> Select photo</p>
                             </div>
                             <!-- Edit photo -->
 
@@ -24,7 +24,7 @@
 
                             <!-- remove photo -->
                             <div v-on:click="deleteProfilePicture" class="uk-button uk-text-capitalize uk-modal-close uk-margin-auto uk-width-1-3 ">
-                                <p > <i class="mdi mdi-trash-can-outline mdi-24px" ></i> Remove photo</p>
+                                <p > <i class="fa fa-trash fa-lg" ></i> Remove photo</p>
                             </div>
                             <!-- remove photo -->
 

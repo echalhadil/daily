@@ -1,6 +1,6 @@
 <template>
     <dropdown 
-        :icon="'mdi-bell-outline'"     
+        :icon="'fa-bell'"     
         :heigth="'21rem'"
         :width="'uk-width-1-4'" 
         :active="false"
@@ -53,15 +53,14 @@
                         </p>
                     </div>
 
-                    <small v-if="! notification.readed" class="mdi uk-margin-auto-vertical uk-text-small uk-padding-remove mdi-circle" style="color: #4A7FF3;" aria-hidden="true"></small> 
+                    <small v-if="! notification.readed" class="fas uk-margin-auto-vertical uk-text-small uk-padding-remove fa-circle" style="color: #4A7FF3;" aria-hidden="true"></small> 
                 </inertia-link >
             
             </div>
 
-            <div v-if="  hasNotifications() == 0" class="uk-width-1-1 uk-margin-bottom">
+            <div v-if="  hasNotifications() == 0" class="uk-width-1-1 uk-text-center uk-margin-bottom" style="color:#9E9E9E;">
                 <p class="uk-h3 uk-text-center uk-margin-top uk-text-bold"  style="color:#9E9E9E;"> You Don't Have any notifications.</p>
-                <p class="mdi mdi-48px uk-text-center mdi-bell-off-outline uk-h3 " style="color:#9E9E9E;"></p>
-
+                <i class="fa fa-bell-slash fa-4x uk-text-center" aria-hidden="true"></i>
             </div>
 
          

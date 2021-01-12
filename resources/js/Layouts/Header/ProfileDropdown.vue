@@ -5,6 +5,7 @@
         :width="'uk-width-1-6'"
         :isIcon="false"
         :active="route().current('profiles.show')"  
+       
         >
     <!-- account -->
      
@@ -22,11 +23,9 @@
 
 
         <div class="uk-width-1-1 uk-border-rounded uk-margin-small-top dropdown-item">
-            <button @click="logout" class="black uk-flex uk-button uk-button-text" style="text-decoration:none;">
-                <i class="uk-margin-small-right mdi mdi-24px mdi-logout "></i>
-                <p class="uk-padding-remove uk-text-capitalize uk-margin-auto-vertical text-reset">
-                   log out
-                </p>
+            <button @click="logout" class="black uk-flex uk-button uk-button-text" style=" height: 36px;text-decoration:none;">
+                <i class="uk-margin-small-right fal fa-sign-out fa-lg uk-margin-auto-vertical"></i>
+                <p class="uk-padding-remove uk-width-1-1 uk-text-capitalize uk-margin-auto-vertical text-reset">log out</p>
             </button>
         </div>
 

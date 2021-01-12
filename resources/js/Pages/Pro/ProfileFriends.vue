@@ -19,7 +19,7 @@
             <div class="uk-margin-auto-vertical uk-margin-auto-left uk-margin-small-right ">
             
 
-                <i class="btn black mdi mdi-18px mdi-dots-vertical" type="button" >
+                <i class="btn black fa fa-lg fa-ellipsis-v" type="button" >
                 </i>
                 <div  uk-dropdown class=" uk-list uk-padding-remove" >
                     <button 

@@ -26,6 +26,7 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
+        "@fortawesome/fontawesome-free": "^5.15.1",
         "larasocket-js": "^1.0.16",
         "laravel-echo": "^1.10.0",
         "pusher-js": "^7.0.2",

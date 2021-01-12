@@ -1,6 +1,6 @@
 <template>
     
-    <div class="uk-border-rounded uk-padding-small uk-margin-top uk-flex uk-box-shadow-small pointer uk-background-default" uk-toggle="target: #addpost" type="button">
+    <div class="uk-border-rounded uk-padding-small uk-flex uk-box-shadow-small pointer uk-background-default" uk-toggle="target: #addpost" type="button">
         <!-- profile picture -->
         <div class=" uk-width-1-5 " >
             <img class=" uk-width-4-5 uk-border-rounded " :src="user.picture" alt="">
@@ -10,8 +10,11 @@
         <div class=" uk-width-4-5 " >
             <input role="button" type="text" class="uk-input " placeholder="Type Somethig Here">
             <div class="uk-flex uk-margin-auto-right uk-margin-small-top uk-text-center">
-                <button class="uk-button-default uk-text-bold">
-                    <i class="mdi mr-auto mdi-file-image mdi-24px " alt='add image'></i>Image
+                <button class="uk-button-default uk-flex uk-border-rounded uk-text-bold">
+                    <i class="fal fa-image   fa-2x  " style="padding:2px;"></i>
+                    <p class=" uk-margin-auto-vertical "style="padding-left:2px;">Image</p>
+                   
+                    
                 </button>
             </div>
         </div>
@@ -36,28 +39,19 @@
 
                             <div class=" uk-flex uk-width-1-1 uk-padding-small">
                                 
-                                <div uk-form-custom class=" uk-flex uk-margin-auto uk-text-center  ">
-                                    <input type="file" accept="image/*" v-on:change="uploadfile()" id="input-image" name="picture">
+                                <div uk-form-custom class="   ">
+                                    <input type="file" accept="image/*" id="input-image" v-on:change="uploadfile()"  name="picture">
                                     <button class="uk-button-default">
-                                        <i class="mdi mr-auto mdi-file-image mdi-24px " alt='add image'></i>Image
+                                        <i class="far mr-auto uk-padding-small fa-image fa-lg" alt='add image'></i>Image
                                     </button>
                                 </div>
-                    
-                                <div uk-form-custom class="uk-flex uk-margin-auto uk-text-center">
-                                    <input type="file" accept="video">
-                                    <button class=" uk-button-default">
-                                        <i class="mdi mdi-file-video mdi-24px " alt='add image'></i>Video
-                                    </button>
-                                </div>
-                                
-                                
-                    
+
                             </div>
 
                             
-                            <div class="uk-card-media-top border uk-padding-small uk-margin-small uk-width-1-4" v-if="preview_image!=null">
-                                <i class=" uk-border-circle uk-float-right mdi mdi-close uk-padding-remove uk-margin-small-bottom black uk-button-small"  style=" background: #e4e6eb;width: 1.8rem; height: 1.8rem;" v-on:click="preview_image ='' " type="button"></i>
-                                <img class=" uk-width-1-1 uk-border-rounded "  :src="preview_image" alt="image">
+                            <div class="uk-card-media-top uk-box-shadow-small uk-padding-small uk-margin-small uk-width-1-2" v-if="preview_image!=''">
+                                <i class=" uk-border-circle uk-float-right far fa-times pointer uk-padding-remove uk-margin-small-bottom black uk-button-small "  style=" background: #e4e6eb;width: 1.8rem; height: 1.8rem;margin-bottom: -32px;position: relative;" v-on:click="preview_image ='' " type="button"></i>
+                                <img class=" uk-width-1-1 uk-cover-object uk-border-rounded "  :src="preview_image" alt="image">
                             </div>
 
             
@@ -84,7 +78,7 @@ export default {
     data() {
         return {
             post:{text:null,picture:null},
-            preview_image:null,
+            preview_image:'',
         }
     },
     methods: {

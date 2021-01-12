@@ -11,53 +11,42 @@
         <div :class="dropdownClasses">
 
             <!--edit -->
-            <button 
+            <div 
                 @click="isVisible =! isVisible" 
                 v-if="isPostOwner" 
                 v-on:click="editPost"
-                class="uk-width-1-1 uk-margin-auto dropdown-item mdi mdi-pencil-outline uk-button-default uk-button" 
-                type="button"
-            > Edit</button> 
+                class="uk-text-capitalize button-top uk-width-1-1 uk-margin-auto dropdown-item  button "
+                 
+              
+            > 
+                <i class="fal fa-pencil" style="padding-right:3px;" aria-hidden="true"></i>
+            Edit</div> 
           
-            <div v-if="isPostOwner" :id="'pe'+postId" class="uk-margin-auto-vertical" uk-modal>
-                
-                <div class="uk-modal-dialog uk-modal-body">
-                    <h2 class="uk-modal-title">edit post</h2>
-                    <div class=" uk-width-1-1 uk-form-blank ">
-                      <input class="uk-input" type="text" v-model="text">
-                    </div>
-                    <button @click="editPost" class="uk-modal-close" type="button">save</button>
-                </div>
-
-            </div>
+            
 
             <!--delete -->
-            <button 
+            <div 
                 @click="isVisible =! isVisible" 
                 v-if="isPostOwner" 
                 v-on:click="deletePost" 
-                class="uk-width-1-1 uk-margin-auto dropdown-item mdi mdi-trash-can-outline uk-button-default uk-button" 
+                class="uk-width-1-1 uk-text-capitalize uk-margin-auto dropdown-item button" 
                 type="button"
             > 
+            <i class="fal fa-trash" style="padding-right:3px;" aria-hidden="true"></i>
             Delete
-            </button> 
+            </div> 
 
             <!--repport -->
-            <button 
-                v-if="! isPostOwner" 
-                :uk-toggle="'target: #ps'+postId" 
+            <div 
+               
                 @click="isVisible =! isVisible" 
-                class="uk-width-1-1 uk-margin-auto dropdown-item mdi mdi-information-outline uk-button-default uk-button" 
-                type="button"
+                class="uk-width-1-1 button-bottom uk-text-capitalize uk-margin-auto dropdown-item button " 
+                
             > 
-                Repport
-            </button> 
-            <div v-if="isPostOwner" :id="'ps'+postId" class="uk-margin-auto-vertical" uk-modal>     
-                <div class="uk-modal-dialog uk-modal-body">
-                    <h2 class="uk-modal-title">edit post</h2>
-                    <button class="uk-modal-close" type="button">save</button>
-                </div>
-            </div>
+                <i class="fal fa-user" style="padding-right:3px;" aria-hidden="true"></i>
+                view Profile
+            </div> 
+            
 
         </div>
     </div>
@@ -95,15 +84,37 @@ export default {
     computed: {
         buttonClasses(){
             return this.isVisble
-                ? 'mdi mdi-18px mdi-dots-vertical uk-open'
-                : 'mdi mdi-18px mdi-dots-vertical '
+                ? ' fas fa-ellipsis-v button  uk-open'
+                : 'fas fa-ellipsis-v button'
         },
         dropdownClasses(){
             return this.isVisible
-                ? 'uk-padding-remove uk-width-1-6 uk-dropdown uk-dropdown-bottom-left uk-open'
-                : 'uk-padding-remove uk-width-1-6 uk-dropdown uk-dropdown-bottom-left'
+                ? 'uk-padding-remove uk-padding button uk-dropdown uk-dropdown-bottom-left uk-text-capitalize uk-open'
+                : 'uk-padding-remove uk-padding button uk-dropdown uk-dropdown-bottom-left uk-text-capitalize '
 
         },
     },
 }
 </script>
+
+<style >
+
+.button{
+    padding: 0.5rem 1rem;
+    cursor:pointer;
+}
+.button:hover{
+    color:#8931bf;
+
+}
+.button-bottom{
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+}
+
+.button-top{
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+}
+    
+</style>

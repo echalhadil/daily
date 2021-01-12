@@ -18,8 +18,8 @@ export default {
     computed: {
         classes(){
             return this.active
-                ? 'mdi mdi-home-outline text-dark mdi-24px daily-primary-color'
-                : 'mdi mdi-home-outline text-dark mdi-24px black'
+                ? 'far fa-home fa-lg text-dark daily-primary-color'
+                : 'far fa-home fa-lg text-dark black'
         },
     },
     

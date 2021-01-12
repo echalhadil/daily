@@ -34,7 +34,7 @@
                 </div>
 
                 <button v-if=" ! userOwnsProfile" class="uk-text-capitalize uk-margin-auto-vertical uk-button uk-button-default uk-text-small" style="margin-left: 2px; padding: 10px; color: #4A7FF3; border-color:#4a7ff370 ;" >message</button>
-                <i v-if=" ! userOwnsProfile" class=" mdi mdi-dots-vertical uk-margin-auto-vertical" style="margin-left: 2px;" ></i>  
+                <i v-if=" ! userOwnsProfile" class=" fa fa-ellipsis-v uk-margin-auto-vertical" style="margin-left: 2px;" ></i>  
 
                 <button v-if="userOwnsProfile" class="uk-text-capitalize uk-margin-auto-vertical uk-button uk-padding-small uk-button-default  uk-border-rounded uk-text-small" style="color: #4A7FF3; border-color:#4a7ff370 ;"uk-toggle="target: #editprofile" >Edit profile</button>
                         
