@@ -1,6 +1,6 @@
 <template>
     
-    <div class="uk-border-rounded uk-padding-small uk-margin-top uk-flex uk-box-shadow-small pointer" uk-toggle="target: #addpost" type="button">
+    <div class="uk-border-rounded uk-padding-small uk-margin-top uk-flex uk-box-shadow-small pointer uk-background-default" uk-toggle="target: #addpost" type="button">
         <!-- profile picture -->
         <div class=" uk-width-1-5 " >
             <img class=" uk-width-4-5 uk-border-rounded " :src="user.picture" alt="">

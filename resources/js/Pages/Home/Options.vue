@@ -14,7 +14,7 @@
             <button 
                 @click="isVisible =! isVisible" 
                 v-if="isPostOwner" 
-                :uk-toggle="'target: #pe'+postId" 
+                v-on:click="editPost"
                 class="uk-width-1-1 uk-margin-auto dropdown-item mdi mdi-pencil-outline uk-button-default uk-button" 
                 type="button"
             > Edit</button> 
@@ -88,7 +88,7 @@ export default {
             this.$emit("delete-post");
         },
         editPost(){
-            this.$emit("edit-post",this.text)
+            this.$emit("edit-post")
         },  
         
     },

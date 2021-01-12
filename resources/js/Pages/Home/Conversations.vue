@@ -1,5 +1,5 @@
 <template>
-    <div class="uk-width-1-1 uk-border-rounded uk-margin-small-top border uk-box-shadow-small">
+    <div class="uk-background-default uk-width-1-1 uk-border-rounded uk-margin-small-top border uk-box-shadow-small">
         <div class=" uk-flex uk-text-bold uk-padding-small ">
             
             <p class="mx-auto uk-margin-auto-right ">Messages</p>

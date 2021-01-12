@@ -11,7 +11,7 @@
         </nav>
 
         <!-- Page Content -->
-        <main class="main-content">
+        <main class="uk-background-muted main-content">
             <slot></slot>
   
         </main>

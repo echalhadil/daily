@@ -30,6 +30,7 @@
         "laravel-echo": "^1.10.0",
         "pusher-js": "^7.0.2",
         "socket.io-client": "^3.0.1",
+        "sweetalert": "^2.1.2",
         "vuex": "^3.6.0"
     }
 }

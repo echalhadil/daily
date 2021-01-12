@@ -1,5 +1,5 @@
 <template>
-    <div class=" uk-border-rounded uk-padding-small uk-margin-top uk-box-shadow-small" >
+    <div class=" uk-background-default uk-border-rounded uk-padding-small uk-margin-top uk-box-shadow-small" >
         
         <!-- post owner -->     
         <owner
@@ -140,6 +140,7 @@
     import Comment from './Comment'
     import Reactions from './Reactions'
 
+    
     export default {
         components:{
             ProfileContent,
@@ -173,7 +174,7 @@
             like(post,user){
                 if(!this.isLiked(post,user))
                 {
-                    axios.post('/likes',post)
+                    axios.post('http://127.0.0.1:8000/likes',post)
                         .then( Response => { this.post.likes.push(Response.data) } )
                         .catch( Error => { console.log(Error) } )
                     console.log('like')
@@ -196,9 +197,6 @@
 
             },
             deletePost(){
-
-                
-                if(confirm("are you sure ?"))
                 
                 this.$emit("delete-post",this.post);
                 
@@ -207,7 +205,7 @@
 
             },
             editPost(text){
-                 this.$emit("edit-post",[text,this.post]);
+                 this.$emit("edit-post",this.post);
             },
             reformDate(LaravelDate){
 

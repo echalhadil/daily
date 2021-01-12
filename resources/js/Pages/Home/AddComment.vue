@@ -17,7 +17,7 @@ export default {
         post:Object,
     },
     methods: {
-         addComment (post){
+        addComment (post){
             if(this.comment.text!=null)
             {    
                 try {

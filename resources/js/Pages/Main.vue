@@ -1,6 +1,6 @@
 <template>
     <ap-layout>
-        <div class="uk-width-5-6 uk-margin-auto uk-padding uk-border-rounded uk-flex d-md-flex uk-height-viewport uk-overflow-auto">
+        <div  class="uk-background-muted uk-width-5-6 uk-margin-auto uk-padding uk-border-rounded uk-flex d-md-flex uk-height-viewport uk-overflow-auto">
             <left-side :user="$page.user"  />
             <right-side :user="$page.user" />
          
