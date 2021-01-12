@@ -5,15 +5,15 @@
             
             <!-- show chats section -->
             <div role="button"  @click="changeSection('chats')" v-bind:class="{  'profile-b':showChats,'bg-white':!showChats}" class="uk-width-1-3 uk-text-small pointer uk-text-center uk-text-capitalize uk-margin-auto-left  uk-border-rounded uk-padding-small "  >
-                <i class="mdi mdi-message-bulleted mdi-24px "></i>
+                <i class="fas fa-comment-alt fa-lg"></i>
                 <p class="uk-margin-remove" > chats </p>
                 
             </div>
             <!-- show chats section -->
 
             <!-- show friends section -->
-                <div role="button" @click="changeSection('pictures')" v-bind:class="{'profile-b':showFriends,'bg-white':!showFriends}" class="uk-width-1-3 pointer uk-text-center uk-text-small uk-text-capitalize uk-margin-small-left uk-border-rounded uk-margin-auto-right uk-padding-small">
-                <i class=" mdi mdi-account-group-outline mdi-24px"></i>
+            <div role="button" @click="changeSection('pictures')" v-bind:class="{'profile-b':showFriends,'bg-white':!showFriends}" class="uk-width-1-3 pointer uk-text-center uk-text-small uk-text-capitalize uk-margin-small-left uk-border-rounded uk-margin-auto-right uk-padding-small">
+                <i class="fa fa-users fa-lg" aria-hidden="true"></i>
                 <p class="uk-margin-remove" >friends</p>
             </div>
             <!-- show friends section -->

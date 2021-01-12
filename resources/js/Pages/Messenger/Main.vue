@@ -12,9 +12,10 @@
                     <slot></slot>
 
                     <!-- Empty conversation -->
-                    <div v-if="empty" class="uk-width-1-1 uk-margin-xlarge-top" >
+                    <div v-if="empty" class="uk-text-center uk-width-1-1 uk-margin-xlarge-top" >
                         <p class="uk-h1 uk-text-center uk-text-bold" > Start your conversation </p>
-                        <p class="mdi mdi-message-plus uk-text-center uk-h1" ></p>
+                       <i class="fas fa-comment-alt-plus  fa-5x  "></i>
+                   
                     </div>
                     <!-- Empty conversation -->
 

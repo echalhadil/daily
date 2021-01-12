@@ -11,7 +11,7 @@
         <div class="pointer uk-width-1-4 uk-margin-auto uk-border-rounded uk-text-center uk-text-warning " style="background: #fff8ed;">
             <p class="uk-margin-small-top  uk-margin-small-bottom " >
 
-                <i class="fa fa-comment" aria-hidden="true"></i> 
+                <i class="fal fa-comment" aria-hidden="true"></i> 
 
                 <b class="uk-text-normal">{{ hasComments }}</b>
             </p>
@@ -19,7 +19,7 @@
         <!-- shares -->
         <div class="pointer uk-width-1-4 uk-border-rounded uk-text-center uk-text-primary " style="background: #eaf2fd;">
             <p class=" uk-margin-small-top  uk-margin-small-bottom " >
-            <i class="fa fa-share" aria-hidden="true"></i>
+            <i class="fal fa-share" aria-hidden="true"></i>
                 <b class="uk-text-normal">{{ hasShares }}</b>
             </p>
         </div>

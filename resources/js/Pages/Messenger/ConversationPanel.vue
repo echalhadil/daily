@@ -8,7 +8,7 @@
                     <!-- friend picture -->
                     <div  class="uk-margin-auto-vertical uk-margin-small-left uk-margin-small-right"> 
                         <inertia-link
-                            class="black mdi mdi-24px mdi-arrow-left uk-width-1-1 uk-border-circle" 
+                            class="black far fa-2x fa-arrow-left uk-width-1-1 uk-border-circle" 
                             href="http://127.0.0.1:8000/messenger"> 
                         </inertia-link>
                     </div>
@@ -29,7 +29,7 @@
                     <!-- friend status -->
                     <div class="uk-margin-auto-vertical uk-margin-auto-left uk-margin-small-right uk-flex" >
                         <p class=" uk-margin-remove uk-text-capitalize  "> 
-                            <i class="mdi uk-text-small mdi-circle" :class="{'uk-text-success':( $page.friend.status == 'online' )}" ></i> 
+                            <i class="fa uk-text-small fa-circle" :class="{'uk-text-success':( $page.friend.status == 'online' )}" ></i> 
                             {{$page.friend.status}}  
                         </p> 
                     </div>
@@ -37,18 +37,21 @@
 
                     <!-- options -->
                     <div class=" uk-margin-small " >
-                        <i roll="button" class="mdi mdi-dots-vertical mdi-24px uk-text-bold" ></i>
+                        <i roll="button" class="fa fa-ellipsis-v fa-lg uk-text-bold" ></i>
                         <div class="uk-padding-remove" uk-dropdown>
-                            <button class="uk-button text-decoration-none uk-width-1-1">
+                            <div class="uk-button button text-decoration-none uk-width-1-1">
                                 <inertia-link 
-                                    class="black" 
+                                    class="black button" 
                                     :href="'http://127.0.0.1:8000/profiles/'+$page.friend.id" 
                                     style="text-decoration:none;" 
                                     >
+                                    <i class="fal fa-user" aria-hidden="true"></i>
                                     Go to profile
                                 </inertia-link>
-                            </button>
-                            <button class="uk-button black uk-width-1-1" @click="deleteAll">Delete All massages</button>
+                            </div>
+                            <div class="uk-button button black uk-width-1-1" @click="deleteAll">
+                            <i class="fal fa-trash" aria-hidden="true"></i>
+                            Delete All massages</div>
                         </div>
                     </div>
                     <!-- options -->
@@ -70,14 +73,14 @@
                 <!-- friend message -->
                 <div v-if="message.user_id != $page.user.id" class="uk-margin-auto-right uk-width-3-4@m uk-width-5-6 uk-flex" >
                     <div class="uk-text-left friend-message uk-margin-remove uk-border-rounded uk-text-capitalize " > {{message.text}} </div>
-                    <div class="uk-margin-auto-right uk-margin-small-left uk-width-5-6 uk-margin-auto-vertical" style="font-size: x-small;" >{{reformDate(message.created_at)}} <i v-on:click="deleteMessage(message)" class="mdi mdi-dots-horizontal uk-margin-auto-vertical uk-margin-auto-right" > </i></div>
+                    <div class="uk-margin-auto-right uk-margin-small-left uk-width-5-6 uk-margin-auto-vertical" style="font-size: x-small;" >{{reformDate(message.created_at)}} <i v-on:click="deleteMessage(message)" class="far fa-ellipsis-h uk-margin-auto-vertical uk-margin-auto-right" > </i></div>
                 </div>
                 <!-- friend message -->
 
                 <!-- your message -->
                 <div v-else class="uk-margin-auto-left uk-width-3-4@m uk-width-5-6 uk-text-right uk-flex" >
                     <div class=" uk-width-5-6 uk-margin-auto-left uk-margin-small-right uk-margin-auto-vertical" style="font-size: x-small;" > 
-                        <i class="mdi mdi-dots-horizontal uk-margin-auto-vertical" type="button" > </i>
+                        <i class="far fa-ellipsis-h uk-margin-auto-vertical" type="button" > </i>
                         <div uk-dropdown="mode:click"> 
                             <button class=" uk-text-capitalize uk-button" v-on:click="deleteMessage(message)">delete </button>
                         </div>
@@ -179,3 +182,9 @@
         },
     }
 </script>
+<style >
+.button:hover{
+     color:#8931bf;
+}
+    
+</style>

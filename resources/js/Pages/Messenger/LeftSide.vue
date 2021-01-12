@@ -6,7 +6,7 @@
             
             <!-- show chats section -->
             <div role="button"  @click="changeSection('chats')" v-bind:class="{  'profile-b':showChats,'bg-white':!showChats}" class="uk-width-1-3 uk-text-small pointer uk-text-center uk-text-capitalize uk-margin-auto-left  uk-border-rounded uk-padding-small "  >
-                <i class="mdi mdi-message-bulleted mdi-24px "></i>
+                <i class="fa fa-message-bulleted mdi-24px "></i>
                 <p class="uk-margin-remove" > chats </p>
                 
             </div>
@@ -14,7 +14,7 @@
 
             <!-- show friends section -->
                 <div role="button" @click="changeSection('pictures')" v-bind:class="{'profile-b':showFriends,'bg-white':!showFriends}" class="uk-width-1-3 pointer uk-text-center uk-text-small uk-text-capitalize uk-margin-small-left uk-border-rounded uk-margin-auto-right uk-padding-small">
-                <i class=" mdi mdi-account-group-outline mdi-24px"></i>
+                <i class="fa fa-users fa-lg" aria-hidden="true"></i>
                 <p class="uk-margin-remove" >friends</p>
             </div>
             <!-- show friends section -->
@@ -41,7 +41,7 @@
                 >
                 <div class=" uk-margin-auto-vertical" style="height:40px;width:40px;"> 
                     <img :src="friend.picture" class=" uk-width-1-1 uk-border-rounded " style="height:40px;width:40px;" alt="" srcset="">
-                    <span  class=" mdi mdi-circle uk-padding-remove uk-position-relative uk-text-small uk-float-right" :class="{ 'uk-text-success':(friend.status=='online') }" style="top: -15px; font-size: small;" > </span>
+                    <span  class=" fa fa-circle uk-padding-remove uk-position-relative uk-text-small uk-float-right" :class="{ 'uk-text-success':(friend.status=='online') }" style="top: -15px; font-size: small;" > </span>
                 </div> 
                 <div class=" uk-margin-small-left  uk-margin-auto-vertical " >
                     <p class=" uk-text-bold uk-padding-remove uk-margin-remove uk-text-capitalize ">{{ friend.firstname }} {{friend.lastname}} </p>
@@ -67,7 +67,7 @@
                     style="width: 40px; height:40px;"
                     >
                     <span  
-                    class="mdi mdi-circle uk-padding-remove uk-position-relative uk-text-small uk-float-right" v-bind:class="{'  uk-text-success':conversation.user.status}"  style="top: -15px; font-size: small;" > </span>
+                    class="fa fa-circle uk-padding-remove uk-position-relative uk-text-small uk-float-right" v-bind:class="{'  uk-text-success':conversation.user.status}"  style="top: -15px; font-size: small;" > </span>
                 </div> 
                 <div class="uk-margin-small-left  uk-margin-auto-vertical " >
                     <p class=" uk-text-bold uk-padding-remove uk-margin-remove uk-text-capitalize ">
@@ -77,7 +77,7 @@
                         <p class=" uk-padding-remove uk-margin-remove uk-text-small uk-text-capitalize uk-text-truncate " > 
                             {{conversation.last_message}} 
                         </p>
-                        <i v-if="!conversation.readed" class=" mdi mdi-circle uk-text-small uk-text-primary uk-margin-small-left "></i>
+                        <i v-if="!conversation.readed" class=" fa fa-circle uk-text-small uk-text-primary uk-margin-small-left "></i>
                     </div>
                 </div>
                 

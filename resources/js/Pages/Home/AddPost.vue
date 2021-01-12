@@ -32,12 +32,19 @@
                                                     
                     <!-- Modal body -->
                         <div class="uk-modal-body uk-padding-remove uk-margin-remove ">
-                
-                            <div class=" uk-width-1-1 uk-padding-remove uk-margin-remove ">
-                                <textarea name="Text" v-model="post.text" placeholder="type something !"  rows="8" class=" uk-width-1-1 uk-h5 uk-padding-remove uk-margin-remove uk-textarea border-0 text-dark appearance-none p-0 m-0  h5 w-100 "></textarea>
-                            </div>
+                            <hr>
+                            <div class=" uk-width-1-1 uk-padding-remove uk-flex uk-margin-remove ">
+                                <div class=" uk-width-1-6" >
+                                    <img class=" uk-width-small uk-border-rounded uk-width-1-2" :src="$page.user.picture" >
+                                </div>
 
-                            <div class=" uk-flex uk-width-1-1 uk-padding-small">
+                                <div class=" uk-margin-auto-vertical uk-width-3-4">
+                                 <input type="text" name="Text" v-model="post.text" placeholder="type something !" class=" uk-width-1-1 uk-h5 uk-padding-remove uk-margin-remove  uk-textarea" style="height: 82px;">
+                                </div>
+
+                            </div>
+                            <hr>
+                            <div class=" uk-flex uk-width-1-1 ">
                                 
                                 <div uk-form-custom class="   ">
                                     <input type="file" accept="image/*" id="input-image" v-on:change="uploadfile()"  name="picture">

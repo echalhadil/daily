@@ -69,15 +69,31 @@
 
 
 <x-guest-layout >
+    
+    <nav class="uk-background-muted uk-width-1-1 uk-position-fixed  uk-flex " >
+        {{-- logo --}}
+        <div class="uk-width-1-3 uk-margin-auto-right uk-margin-left">
+            <h1 class="uk-text-bold  " style="color: black">DAILY</h1>
+            
+        </div>
 
-    <div class=" uk-width-1-1 uk-flex uk-height-viewport ">
+        {{-- auth --}}
+        <div class="uk-flex  uk-margin-auto-left">
+            <a role="button" href="{{ route('login') }}" class=" uk-button uk-button-default uk-button-small"  style="margin:auto;">Login</a>
+            <a role="button" href="{{ route('register') }}" class=" uk-margin-left uk-margin-right uk-button uk-button-primary uk-button-default" style="margin:auto; color:white; ">register</a>
+        </div>
+      
+    </nav>
+
+
+    <div class="uk-background-muted uk-width-1-1 uk-flex uk-height-viewport ">
 
         <div class="uk-width-1-2@m uk-visible@m uk-height-viewport">
             left
         </div>
     
         <div class="uk-width-1-2@m  uk-height-viewport">
-            <div class=" uk-padding-small uk-margin-large-top uk-border-rounded  uk-width-3-5@m uk-box-shadow-small " style="background: white;" >
+            <div style="background: white;" class="uk-margin-top uk-padding-small uk-margin-large-top uk-border-rounded  uk-width-3-5@m uk-box-shadow-small " style="background: white;" >
 
                 <div class=" uk-text-center" >
                     <p class=" uk-margin-small uk-text-capitalize uk-text-bold uk-h2 " > {{ __('register') }} </p>
@@ -163,7 +179,7 @@
 
                     {{-- button --}}
                     <div class="uk-margin-small">
-                        <button type="submit" class="uk-button uk-button-primary" style=" color:white; background: #4A7FF3;">{{ __('Register') }}</button>
+                        <button type="submit" class="uk-button uk-button-primary" style=" color:white; ">{{ __('Register') }}</button>
                     </div>
                 </form>
     
