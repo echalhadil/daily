@@ -25,7 +25,7 @@
         <script src="{{ asset('js/uikit.min.js') }}"></script>
         <script src="{{ asset('js/uikit-icons.js') }}"></script>
     </head>
-    <body class="font-sans antialiased">
+    <body class="font-sans antialiased uk-background-muted">
         @inertia
     </body>
 </html>
