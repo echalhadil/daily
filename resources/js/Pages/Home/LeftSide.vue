@@ -17,6 +17,17 @@
             <span> </span>
             <span> </span>
         </div>
+
+
+        <div  v-if="posts.length==0" class="uk-margin-large uk-width-1-1 uk-text-center uk-margin-auto " style="color:#828282;">
+
+
+        
+            <p class="uk-h1 uk-margin-top uk-text-capitalize uk-h3 " style="color:#828282;"  > Aucune publication</p>
+            <i class="fa fa-moon-stars fa-9x " aria-hidden="true"></i>
+                
+
+        </div>
       
     </div>
 </template>

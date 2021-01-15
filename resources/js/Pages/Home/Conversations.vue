@@ -21,14 +21,14 @@
                         {{ reformDate(conversation.updated_at) }}
                     </p>
                 </div>
-                <i v-if=" ! conversation.readed" class="mdi mdi-circle uk-text-small uk-margin-auto-left uk-margin-auto-vertical uk-margin-right " style="color: #4A7FF3;" aria-hidden="true"></i> 
+                <i v-if=" ! conversation.readed" class="fa fa-circle uk-text-small uk-margin-auto-left uk-margin-auto-vertical uk-margin-right " style="color: #4A7FF3;" aria-hidden="true"></i> 
 
 
             </div>
 
-            <div v-if=" conversations.length == 0 "  class="uk-width-1-1 uk-margin-bottom">
+            <div v-if=" conversations.length == 0 "  class="uk-width-1-1 uk-text-center uk-margin-bottom">
                 <p class="uk-h4 uk-text-center uk-margin-top uk-text-bold" style="color:#9E9E9E;"> You Don't Have any Messages.</p>
-                <p class="mdi mdi-48px uk-text-center mdi-message-bulleted-off uk-h4 uk-padding-remove-top uk-padding-small " style="color:#9E9E9E;"></p>
+                <i class="fas uk-text-center fa-4x uk-padding-remove-top uk-padding-small  fa-comment-alt-slash    "></i>
             </div>
            
           

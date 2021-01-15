@@ -68,9 +68,9 @@
                 
             </inertia-link>
 
-            <div v-if="! conversations.length " class="uk-width-1-1 uk-margin-bottom">
+            <div v-if="! conversations.length " class="uk-width-1-1 uk-text-center uk-margin-bottom">
                 <p class="uk-h3 uk-text-center uk-margin-top uk-text-bold uk-text-capitalize" style="color:#9E9E9E;"> You Don't Have any conversations.</p>
-                <p class="mdi mdi-48px uk-margin-remove uk-text-center mdi-message-bulleted-off uk-h3 " style="color:#9E9E9E;"></p>
+                <i class="fas fa-3x fa-comment-alt-slash    "style="color:#9E9E9E;"></i>
             </div>
         
         </div>
@@ -95,6 +95,12 @@
                     <p class=" uk-padding-remove uk-margin-remove uk-text-small uk-text-capitalize " > {{friend.status}} </p>
                 </div>
             </inertia-link> 
+
+            <div v-if="! friends.length " class="uk-width-1-1 uk-text-center uk-margin-bottom">
+                <p class="uk-h3 uk-text-center uk-margin-top uk-text-bold uk-text-capitalize" style="color:#9E9E9E;"> 
+                You Don't Have any friends.</p>
+               <i class="fas fa-3x fa-user-slash" style="color:#9E9E9E;"></i>
+            </div>
         </div>
         <!-- friends -->
 
