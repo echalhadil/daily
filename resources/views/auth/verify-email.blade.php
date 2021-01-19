@@ -1,7 +1,7 @@
 <x-guest-layout>
     <x-jet-authentication-card>
-        <x-slot name="logo">
-            <x-jet-authentication-card-logo />
+        <x-slot  name="logo">
+            {{-- <x-jet-authentication-card-logo style="height: 30px; width:30px;" /> --}}
         </x-slot>
 
         <div class="mb-4 text-sm text-gray-600">
@@ -14,7 +14,7 @@
             </div>
         @endif
 
-        <div class="mt-4 flex items-center justify-between">
+        <div class="mt-4 flex items-center justify-between uk-flex">
             <form method="POST" action="{{ route('verification.send') }}">
                 @csrf
 
@@ -22,6 +22,10 @@
                     <x-jet-button type="submit">
                         {{ __('Resend Verification Email') }}
                     </x-jet-button>
+                    <button type="submit" class=" uk-button uk-button-primary " >
+                        {{ __('Resend Verification Email') }}
+
+                    </button>
                 </div>
             </form>
 
@@ -30,6 +34,10 @@
 
                 <button type="submit" class="underline text-sm text-gray-600 hover:text-gray-900">
                     {{ __('Logout') }}
+                </button>
+                <button type="submit" class=" uk-button uk-button-secondary " >
+                    {{ __('Logout') }}
+
                 </button>
             </form>
         </div>
